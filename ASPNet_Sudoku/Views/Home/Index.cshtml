@@ -1,0 +1,95 @@
+﻿@{
+    ViewData["Title"] = "Sudoku Generator";
+}
+
+<head>
+    <title>@ViewData["Title"]</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.5.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlQ/OVRtwe1hiwJkXlMxj21tgLpy6tGkF5FyGd4GJv14mz2q27f9z5cV5S6V5+" crossorigin="anonymous">
+    <style>
+
+        h1 {
+            text-align: center;
+        }
+
+        label {
+            font-weight: bold;
+        }
+
+        td {
+            border: 1px solid #ddd;
+            padding: 2px;
+            text-align: center;
+            min-width:47px;
+        }
+
+        td:nth-child(3n){
+            border-right: 3px solid #000000;
+        }
+        
+        table{
+            border:3px solid #000000;
+        }
+
+        tr:nth-child(3n){
+            border-bottom:3px solid #000000;
+        }
+        input[type="number"] {
+            width: 100%;
+            height: 25px;
+            padding: 0;
+            margin: 0;
+        }
+
+        button {
+            background-color: #007bff;
+            color: #fff;
+            border: none;
+            padding: 5px 10px;
+            cursor: pointer;
+            width: 100%;
+            margin-top: 10px;
+        }
+
+            button:hover {
+                background-color: #0056b3;
+            }
+            .container{
+
+            }
+    </style>
+</head>
+<body>
+    <div class="container mt-4">
+        <div class="row">
+            <div class="col-md-6 offset-md-3">
+                <h1>@ViewData["Title"]</h1>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-6 offset-md-3">
+                <form method="post" asp-action="GenerateSudoku">
+                    <div class="mb-3">
+                        <label for="difficulty" class="form-label">Poziom trudności (Liczba widocznych pól):</label>
+                        <input type="number" id="difficulty" name="difficulty" class="form-control" min="1" max="81" value="30" />
+                    </div>
+                    <button type="submit" class="btn btn-primary">Generuj Sudoku</button>
+                </form>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-6 offset-md-3">
+                @if (ViewBag.SudokuTable != null)
+                {
+                    <div class="mt-4">
+                        <h2>Plansza Sudoku:</h2>
+                        @Html.Raw(ViewBag.SudokuTable)
+                    </div>
+
+                }
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.5.0/dist/js/bootstrap.min.js" integrity="sha384-d7I10IMd09zztyj5z5l5gXiF4rZl5xCYeF5FyGd4GJv14mz2q27f9z5cV5S6V5+" crossorigin="anonymous"></script>
+<!--Dodać sprawdzanie poprawności rozwiązania po przez javascript lub kontroler-->
+</body>

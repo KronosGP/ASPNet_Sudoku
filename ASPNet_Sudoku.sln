@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.33027.164
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ASPNet_Sudoku", "ASPNet_Sudoku\ASPNet_Sudoku.csproj", "{6CE32269-CD88-400A-914D-70E4330967CB}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{6CE32269-CD88-400A-914D-70E4330967CB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6CE32269-CD88-400A-914D-70E4330967CB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6CE32269-CD88-400A-914D-70E4330967CB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6CE32269-CD88-400A-914D-70E4330967CB}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {E744F4B0-62DB-437F-AF44-E7F87661F24F}
+	EndGlobalSection
+EndGlobal
